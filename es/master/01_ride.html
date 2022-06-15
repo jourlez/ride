@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User guide &mdash; documentación de ride - 1.0.0</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Ride Examples" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> ride
+          </a>
+              <div class="version">
+                master
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#user-requirements">User Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-ansible">Install Ansible</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fedora">Fedora</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rhel">RHEL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#centos">CentOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pip">Pip</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#install-ansible-roles">Install Ansible Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-ansible-playbook">Run Ansible Playbook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verify-private-node-and-explorer">Verify Private Node and Explorer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-run-the-tests">How to Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deposit-and-withdraw">Deposit and Withdraw</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#source-code">Source Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tests">Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deployment">Deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keeper-integration">Keeper Integration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#developer-guide-contributing">Developer Guide/Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#developer-requirements">Developer Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#project-structure">Project Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#document-generation">Document Generation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#html">HTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pdf">PDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#epub">EPUB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#internationalization-i18n">Internationalization (i18n)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ride</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>User guide</li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="user-guide">
+<h1>User guide<a class="headerlink" href="#user-guide" title="Permalink to this heading"></a></h1>
+<section id="user-requirements">
+<h2>User Requirements<a class="headerlink" href="#user-requirements" title="Permalink to this heading"></a></h2>
+<section id="install-ansible">
+<h3>Install Ansible<a class="headerlink" href="#install-ansible" title="Permalink to this heading"></a></h3>
+<p>Ansible will take care of setting your development envireonment, but for that you need to install Ansible first.</p>
+<section id="fedora">
+<h4>Fedora<a class="headerlink" href="#fedora" title="Permalink to this heading"></a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo dnf install ansible
+</pre></div>
+</div>
+</section>
+<section id="rhel">
+<h4>RHEL<a class="headerlink" href="#rhel" title="Permalink to this heading"></a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo yum install ansible
+</pre></div>
+</div>
+</section>
+<section id="centos">
+<h4>CentOS<a class="headerlink" href="#centos" title="Permalink to this heading"></a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo yum install epel-release
+sudo yum install ansible
+</pre></div>
+</div>
+</section>
+<section id="ubuntu">
+<h4>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this heading"></a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo apt install ansible
+</pre></div>
+</div>
+</section>
+<section id="pip">
+<h4>Pip<a class="headerlink" href="#pip" title="Permalink to this heading"></a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo pip3 install ansible
+</pre></div>
+</div>
+</section>
+<p></p>
+</section>
+<section id="install-ansible-roles">
+<h3>Install Ansible Roles<a class="headerlink" href="#install-ansible-roles" title="Permalink to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ansible-galaxy install -r ./ansible/requirements.yml
+</pre></div>
+</div>
+</section>
+<section id="run-ansible-playbook">
+<h3>Run Ansible Playbook<a class="headerlink" href="#run-ansible-playbook" title="Permalink to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ansible-playbook ./ansible/install.yml --ask-become-pass
+</pre></div>
+</div>
+<p>At this point Ansible will take a few minutes to set everything up so please be patient.</p>
+</section>
+<section id="verify-private-node-and-explorer">
+<h3>Verify Private Node and Explorer<a class="headerlink" href="#verify-private-node-and-explorer" title="Permalink to this heading"></a></h3>
+<p>You can verify that the node is running through REST API at <a class="reference external" href="http://localhost:6869">http://localhost:6869</a>.</p>
+<p>On top of that you can also see an empty chain of you local node rapidly being built using your instance of the Explorer at <a class="reference external" href="http://localhost:3000">http://localhost:3000</a>.</p>
+</section>
+</section>
+<section id="how-to-run-the-tests">
+<h2>How to Run the Tests<a class="headerlink" href="#how-to-run-the-tests" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>The command to run tests is the following:</p></li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>surfboard test
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>If you have several scenarios (for instance, you need a separate deployment script), you can run a particular scenario by running</p></li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>surfboard test my-scenario.js
+</pre></div>
+</div>
+<p>Surfboard will pick up all the tests files in ./test/ folder and run the scenario over a node through the endpoint configured in surfboard.config.json . After several seconds, you will see the test results.</p>
+<ol class="arabic" start="3">
+<li><p>There are several parameters you can use while testing:</p>
+<blockquote>
+<div><ul>
+<li><dl class="option-list">
+<dt><kbd><span class="option">-v</span>, <span class="option">--verbose</span></kbd></dt>
+<dd><p>logs all transactions and node responses</p>
+</dd>
+</dl>
+</li>
+<li><dl class="option-list">
+<dt><kbd><span class="option">--env=<var>env</var></span></kbd></dt>
+<dd><p>which environment should be used for test</p>
+</dd>
+</dl>
+</li>
+<li><dl class="option-list">
+<dt><kbd><span class="option">--variables=<var>variables</var></span></kbd></dt>
+<dd><p>env variables can be set for usage in tests via env.{variable_name}. E.g.: MY_SEED=»seed phraze»,DAPP_ADDRESS=xyz, AMOUNT=1000</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<section id="deposit-and-withdraw">
+<h3>Deposit and Withdraw<a class="headerlink" href="#deposit-and-withdraw" title="Permalink to this heading"></a></h3>
+<p>This example will guide you through all the necessary steps for developing a simple decentralised application(dApp) in which anyone can deposit as many tokens to the dApp as they want, but they can only withdraw their own waves.</p>
+<p>Navigate to the ./ride/examples/01/ folder which is where your Ride Project will be located in. Then run the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>surfboard init
+</pre></div>
+</div>
+<p>If you get a warning saying the directory is not empty continue anyways by selecting yes, this part is very important. The above will produce an output similar to this one:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>~/ride/examples/01$ surfboard init
+❗️Generated new local config
+Testnet seed=&quot;chapter position silver stage later verify account organ ride bronze emotion scissors&quot;
+Testnet address=&quot;3MptwsrUdoZD5pnLTVmy7BuLE14G8sRp83V&quot;❗
+Project initialization... done
+</pre></div>
+</div>
+<p>The seed and address on the previous message are there because while creating you new Ride project, Surfboard also created a new wallet for you on the Testnet node of the Blockchain. Make sure to save them both since you will require them for the next steps.</p>
+<section id="source-code">
+<h4>Source Code<a class="headerlink" href="#source-code" title="Permalink to this heading"></a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.
+├── surfboard.config.json
+├── ride
+│    └── wallet.ride
+├── scripts
+│    └── wallet.deploy.js
+└── test
+    └── wallet.ride-test.js
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>surfboard.config.json is the configuration file for your Ride project.</p></li>
+<li><p>ride/ contains all of your Ride Scripts(Smart Contracts/dApps).</p></li>
+<li><p>test/ has all your test files, in this case powered by javascript’s <a class="reference external" href="https://mochajs.org/">Mocha</a> framework.</p></li>
+<li><p>scripts/ holds scripts used for deploying your smart contracts or dApps.</p></li>
+</ul>
+<section id="surfboard-config-json">
+<h5>surfboard.config.json<a class="headerlink" href="#surfboard-config-json" title="Permalink to this heading"></a></h5>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;ride_directory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ride&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;test_directory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;envs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;custom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;API_BASE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:6869/&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;CHAIN_ID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;R&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;SEED&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;waves private node seed with waves tokens&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;timeout&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60000</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;testnet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;API_BASE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://nodes-testnet.wavesnodes.com/&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;CHAIN_ID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;SEED&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;chapter position silver stage later verify account organ ride bronze emotion scissors&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;timeout&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60000</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;defaultEnv&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;custom&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;mocha&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;timeout&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60000</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The envs (environment) entries which are: custom and testnet are important since these are used to set the default deployment environment for your dApps. Each environment is configured by:</p>
+<ul class="simple">
+<li><p>API_BASE: The REST API endpoint of the node that will be used for running a dApp as well as the CHAIN_ID of the network.</p></li>
+<li><p>SEED: The seed phrase for account with tokens, which will be the source of all the tokens in your test. As you noticed, the SEED for the testnet entry matches the seed of the account Surfboard automatically created for you.</p></li>
+</ul>
+</section>
+<section id="wallet-ride">
+<h5>wallet.ride<a class="headerlink" href="#wallet-ride" title="Permalink to this heading"></a></h5>
+<div class="highlight-ride notranslate"><div class="highlight"><pre><span></span><span class="c1"># In this example multiple accounts can deposit their funds and safely take them back.</span>
+<span class="c1"># User balances are stored in the dApp state as mapping `address=&gt;waves`.</span>
+
+<span class="kr">{-# STDLIB_VERSION 3 #-}</span>
+<span class="kr">{-# CONTENT_TYPE DAPP #-}</span>
+<span class="kr">{-# SCRIPT_TYPE ACCOUNT #-}</span>
+
+<span class="kr">@Callable</span><span class="p">(</span><span class="nv">i</span><span class="p">)</span>
+<span class="kr">func</span> <span class="nv">deposit</span><span class="p">()</span> <span class="nf">=</span> <span class="p">{</span>
+   <span class="c1"># deposit function can be invoked from UI by user to top up the balance</span>
+   <span class="kr">let</span> <span class="nv">pmt</span> <span class="nf">=</span> <span class="nf">extract</span><span class="p">(</span><span class="nv">i</span><span class="nf">.</span><span class="nv">payment</span><span class="p">)</span>  <span class="c1"># creating variable with all data about a payment attached to the invokation</span>
+   <span class="kr">if</span> <span class="p">(</span><span class="nf">isDefined</span><span class="p">(</span><span class="nv">pmt</span><span class="nf">.</span><span class="nv">assetId</span><span class="p">))</span> <span class="kr">then</span> <span class="nf">throw</span><span class="p">(</span><span class="s">&quot;can hodl waves only at the moment&quot;</span><span class="p">)</span>  <span class="c1"># waves-only threshold</span>
+   <span class="kr">else</span> <span class="p">{</span>
+        <span class="kr">let</span> <span class="nv">currentKey</span> <span class="nf">=</span> <span class="nf">toBase58String</span><span class="p">(</span><span class="nv">i</span><span class="nf">.</span><span class="nv">caller</span><span class="nf">.</span><span class="nv">bytes</span><span class="p">)</span>  <span class="c1"># determining caller key</span>
+        <span class="kr">let</span> <span class="nv">currentAmount</span> <span class="nf">=</span> <span class="kr">match</span> <span class="nf">getInteger</span><span class="p">(</span><span class="nf">this</span><span class="p">,</span> <span class="nv">currentKey</span><span class="p">)</span> <span class="p">{</span>  <span class="c1"># reading current user&#39;s balance from the account state</span>
+            <span class="kr">case</span> <span class="nv">a</span><span class="nf">:</span><span class="kt">Int</span> <span class="nf">=&gt;</span> <span class="nv">a</span>
+            <span class="kr">case</span> <span class="nv">_</span> <span class="nf">=&gt;</span> <span class="mi">0</span>  <span class="c1"># taking zero as a balance value if this is the first time user deposits money</span>
+        <span class="p">}</span>
+        <span class="kr">let</span> <span class="nv">newAmount</span> <span class="nf">=</span> <span class="nv">currentAmount</span> <span class="nf">+</span> <span class="nv">pmt</span><span class="nf">.</span><span class="nv">amount</span>  <span class="c1"># counting new balance as &quot;old balance + payment value&quot;</span>
+        <span class="kt">WriteSet</span><span class="p">([</span><span class="kt">DataEntry</span><span class="p">(</span><span class="nv">currentKey</span><span class="p">,</span> <span class="nv">newAmount</span><span class="p">)])</span>  <span class="c1"># updating user&#39;s balance in the account state</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">@Callable</span><span class="p">(</span><span class="nv">i</span><span class="p">)</span>
+<span class="kr">func</span> <span class="nv">withdraw</span><span class="p">(</span><span class="nv">amount</span><span class="nf">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="nf">=</span> <span class="p">{</span>
+    <span class="c1"># withdraw function can be invoked by user to &quot;cash out&quot; a part of his balance</span>
+    <span class="kr">let</span> <span class="nv">currentKey</span> <span class="nf">=</span> <span class="nf">toBase58String</span><span class="p">(</span><span class="nv">i</span><span class="nf">.</span><span class="nv">caller</span><span class="nf">.</span><span class="nv">bytes</span><span class="p">)</span> 
+    <span class="kr">let</span> <span class="nv">currentAmount</span> <span class="nf">=</span> <span class="kr">match</span> <span class="nf">getInteger</span><span class="p">(</span><span class="nf">this</span><span class="p">,</span> <span class="nv">currentKey</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">case</span> <span class="nv">a</span><span class="nf">:</span><span class="kt">Int</span> <span class="nf">=&gt;</span> <span class="nv">a</span>
+        <span class="kr">case</span> <span class="nv">_</span> <span class="nf">=&gt;</span> <span class="mi">0</span>
+    <span class="p">}</span>
+    <span class="kr">let</span> <span class="nv">newAmount</span> <span class="nf">=</span> <span class="nv">currentAmount</span> <span class="nf">-</span> <span class="nv">amount</span>
+    <span class="kr">if</span> <span class="p">(</span><span class="nv">amount</span> <span class="nf">&lt;</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># is user requesting a positive amount?</span>
+            <span class="kr">then</span> <span class="nf">throw</span><span class="p">(</span><span class="s">&quot;Can&#39;t withdraw negative amount&quot;</span><span class="p">)</span>
+    <span class="kr">else</span> <span class="kr">if</span> <span class="p">(</span><span class="nv">newAmount</span> <span class="nf">&lt;</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># does user have enough balance for this withdraw?</span>
+            <span class="kr">then</span> <span class="nf">throw</span><span class="p">(</span><span class="s">&quot;Not enough balance&quot;</span><span class="p">)</span>
+            <span class="kr">else</span> <span class="kt">ScriptResult</span><span class="p">(</span>
+                    <span class="kt">WriteSet</span><span class="p">([</span><span class="kt">DataEntry</span><span class="p">(</span><span class="nv">currentKey</span><span class="p">,</span> <span class="nv">newAmount</span><span class="p">)]),</span>  <span class="c1"># saving new balance to the account state</span>
+                    <span class="kt">TransferSet</span><span class="p">([</span><span class="kt">ScriptTransfer</span><span class="p">(</span><span class="nv">i</span><span class="nf">.</span><span class="nv">caller</span><span class="p">,</span> <span class="nv">amount</span><span class="p">,</span> <span class="nf">unit</span><span class="p">)])</span>  <span class="c1"># transfering the withdraw amount to user</span>
+                <span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="kr">@Verifier</span><span class="p">(</span><span class="nv">tx</span><span class="p">)</span>
+<span class="kr">func</span> <span class="nv">verify</span><span class="p">()</span> <span class="nf">=</span> <span class="nv">false</span>  <span class="c1"># this script can NOT be updated because of this verifier function</span>
+</pre></div>
+</div>
+<p>There are two &#64;Callable functions available for invocation via <a class="reference external" href="https://docs.decentralchain.io/es/master/03_advanced.html#invokescripttransaction" title="(en DecentralChain versión master)"><span class="xref std std-ref">InvokeScriptTransaction</span></a>.</p>
+<ul class="simple">
+<li><p>deposit(), which requires attached payment.</p></li>
+<li><p>withdraw(amount: Int), which transfers tokens back to the caller upon successful execution.</p></li>
+</ul>
+<p>Throughout the dApp lifecycle, there will be a mapping(address → amount) maintained:</p>
+<table class="colwidths-given longtable docutils align-default" id="id3">
+<caption><span class="caption-text">Mapping(address → amount)</span><a class="headerlink" href="#id3" title="Enlace permanente a esta tabla"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Action</p></th>
+<th class="head"><p>Resulting State</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&lt;initial&gt;</p></td>
+<td><p>&lt;empty&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>Alice deposits 5 Waves</p></td>
+<td><p>&lt;alice-address&gt; → 500000000</p></td>
+</tr>
+<tr class="row-even"><td><p>Bob deposits 2 Waves</p></td>
+<td><p>&lt;alice-address&gt; → 500000000; &lt;bob-address&gt; → 200000000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bob withdraws 7 Waves</p></td>
+<td><p>&lt;DENIED!&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>Alice withdraws 4 Waves</p></td>
+<td><p>&lt;alice-address&gt; → 100000000; &lt;bob-address&gt; → 200000000</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="wallet-deploy-js">
+<h5>wallet.deploy.js<a class="headerlink" href="#wallet-deploy-js" title="Permalink to this heading"></a></h5>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Wallet.ride deploy script. To run execute `surfboard run path/to/script`</span><span class="w"></span>
+
+<span class="c1">// wrap out script with async function to use fancy async/await syntax</span><span class="w"></span>
+<span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Functions, available in tests, also available here</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">compile</span><span class="p">(</span><span class="nx">file</span><span class="p">(</span><span class="s1">&#39;wallet.ride&#39;</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// You can set env varibles via cli arguments. E.g.: `surfboard run path/to/script  --variables &#39;dappSeed=seed phrase,secondVariable=200&#39;`</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">dappSeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">env</span><span class="p">.</span><span class="nx">dappSeed</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">dappSeed</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`Please provide dappSedd`</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//const dappSeed = env.SEED; // Or use seed phrase from surfboard.config.json</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">ssTx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">setScript</span><span class="p">({</span><span class="w"></span>
+<span class="w">        </span><span class="nx">script</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// additionalFee: 400000 // Uncomment to raise fee in case of redeployment</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="nx">dappSeed</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">ssTx</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">waitForTx</span><span class="p">(</span><span class="nx">ssTx</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ssTx</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span><span class="w"></span>
+<span class="p">})();</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="wallet-ride-test-js">
+<h5>wallet.ride-test.js<a class="headerlink" href="#wallet-ride-test-js" title="Permalink to this heading"></a></h5>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">wvs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span><span class="w"></span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;wallet test suite&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">timeout</span><span class="p">(</span><span class="mf">100000</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">before</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">setupAccounts</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="nx">foofoofoofoofoofoofoofoofoofoofoo</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">wvs</span><span class="p">,</span><span class="w"></span>
+<span class="w">                 </span><span class="nx">barbarbarbarbarbarbarbarbarbar</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">wvs</span><span class="p">,</span><span class="w"></span>
+<span class="w">                  </span><span class="nx">wallet</span><span class="o">:</span><span class="w"> </span><span class="mf">0.05</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">wvs</span><span class="p">});</span><span class="w"></span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">compile</span><span class="p">(</span><span class="nx">file</span><span class="p">(</span><span class="s1">&#39;wallet.ride&#39;</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">ssTx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">setScript</span><span class="p">({</span><span class="nx">script</span><span class="p">},</span><span class="w"> </span><span class="nx">accounts</span><span class="p">.</span><span class="nx">wallet</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">ssTx</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">waitForTx</span><span class="p">(</span><span class="nx">ssTx</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Script has been set&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nx">it</span><span class="p">(</span><span class="s1">&#39;Can deposit&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">iTxFoo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">invokeScript</span><span class="p">({</span><span class="w"></span>
+<span class="w">            </span><span class="nx">dApp</span><span class="o">:</span><span class="w"> </span><span class="nx">address</span><span class="p">(</span><span class="nx">accounts</span><span class="p">.</span><span class="nx">wallet</span><span class="p">),</span><span class="w"></span>
+<span class="w">            </span><span class="nx">call</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="kd">function</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;deposit&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="nx">payment</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="nx">assetId</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="mf">0.9</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">wvs</span><span class="p">}]</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="nx">accounts</span><span class="p">.</span><span class="nx">foofoofoofoofoofoofoofoofoofoofoo</span><span class="p">);</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">iTxBar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">invokeScript</span><span class="p">({</span><span class="w"></span>
+<span class="w">            </span><span class="nx">dApp</span><span class="o">:</span><span class="w"> </span><span class="nx">address</span><span class="p">(</span><span class="nx">accounts</span><span class="p">.</span><span class="nx">wallet</span><span class="p">),</span><span class="w"></span>
+<span class="w">            </span><span class="nx">call</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="kd">function</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;deposit&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="nx">payment</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="nx">assetId</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="mf">1.9</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">wvs</span><span class="p">}]</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="nx">accounts</span><span class="p">.</span><span class="nx">barbarbarbarbarbarbarbarbarbar</span><span class="p">)</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">iTxFoo</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">iTxBar</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">waitForTx</span><span class="p">(</span><span class="nx">iTxFoo</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">waitForTx</span><span class="p">(</span><span class="nx">iTxBar</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">it</span><span class="p">(</span><span class="s1">&#39;Cannot withdraw more than was deposited&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">iTxFoo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">invokeScript</span><span class="p">({</span><span class="w"></span>
+<span class="w">            </span><span class="nx">dApp</span><span class="o">:</span><span class="w"> </span><span class="nx">address</span><span class="p">(</span><span class="nx">accounts</span><span class="p">.</span><span class="nx">wallet</span><span class="p">),</span><span class="w"></span>
+<span class="w">            </span><span class="nx">call</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="kd">function</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;withdraw&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">args</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="nx">type</span><span class="o">:</span><span class="s1">&#39;integer&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">wvs</span><span class="p">}]</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="nx">accounts</span><span class="p">.</span><span class="nx">foofoofoofoofoofoofoofoofoofoofoo</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="nx">expect</span><span class="p">(</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">iTxFoo</span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">rejectedWith</span><span class="p">(</span><span class="s2">&quot;Not enough balance&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">it</span><span class="p">(</span><span class="s1">&#39;Can withdraw&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">iTxFoo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">invokeScript</span><span class="p">({</span><span class="w"></span>
+<span class="w">            </span><span class="nx">dApp</span><span class="o">:</span><span class="w"> </span><span class="nx">address</span><span class="p">(</span><span class="nx">accounts</span><span class="p">.</span><span class="nx">wallet</span><span class="p">),</span><span class="w"></span>
+<span class="w">            </span><span class="nx">call</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="kd">function</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;withdraw&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">args</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;integer&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="mf">0.9</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">wvs</span><span class="w"> </span><span class="p">}]</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="nx">accounts</span><span class="p">.</span><span class="nx">foofoofoofoofoofoofoofoofoofoofoo</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">iTxFoo</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</pre></div>
+</div>
+<p>There’s a before function and three tests. Let’s review them:</p>
+<ul class="simple">
+<li><p>The before function funds a few accounts via <a class="reference external" href="https://docs.decentralchain.io/es/master/03_advanced.html#masstransfertransaction" title="(en DecentralChain versión master)"><span class="xref std std-ref">MassTransferTransaction</span></a> using <a class="reference external" href="https://wavesplatform.github.io/js-test-env/globals.html#setupaccounts">setupAccounts</a> (foo, bar and wallet),  <a class="reference external" href="https://wavesplatform.github.io/js-test-env/globals.html#compile">compiles</a> the script and creates a <a class="reference external" href="https://wavesplatform.github.io/js-test-env/globals.html#setscript">set-script</a> transaction of the compiled script which assigns it to the account under the name of wallet and <a class="reference external" href="https://wavesplatform.github.io/js-test-env/globals.html#broadcast">broadcasted</a> to the blockchain and then mined into a block via <a class="reference external" href="https://wavesplatform.github.io/js-test-env/globals.html#waitfortx">waitForTx</a>.</p></li>
+<li><p>The «Can deposit» test verifies correct deposits are being processed successfully; signs and broadcasts an <a class="reference external" href="https://docs.decentralchain.io/es/master/03_advanced.html#invokescripttransaction" title="(en DecentralChain versión master)"><span class="xref std std-ref">InvokeScriptTransaction</span></a> invoking deposit() function with an <a class="reference external" href="https://wavesplatform.github.io/js-test-env/globals.html#invokescript">invokescript</a>, for two accounts that were setup in the before function which are foo and bar. Check out the <a class="reference external" href="https://wavesplatform.github.io/js-test-env/interfaces/iinvokescriptparams.html">invokescript parameters</a></p></li>
+<li><p>The «Can’t withdraw more than was deposited» test verifies that no-one can “steal” another account’s tokens</p></li>
+<li><p>The «Can withdraw» test verifies that correct withdrawals are being processed successfully.</p></li>
+</ul>
+</section>
+</section>
+<section id="tests">
+<h4>Tests<a class="headerlink" href="#tests" title="Permalink to this heading"></a></h4>
+<p>When you run the tests Surfboard will pick up all the test files inside the ./test/ folder and run them over a node through the endpoint configured in surfboard.config.json. After several seconds, you will see an output like this one:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>~/ride/examples/01$ surfboard test
+Starting test with &quot;custom&quot; environment
+Root address: 3M4qwDomRabJKLZxuXhwfqLApQkU592nWxF
+
+ wallet test suite
+Generating accounts with nonce: d1ef4b3
+Account generated: foofoofoofoofoofoofoofoofoofoofoo#d1ef4b3 - 3M9AKTNRKmFkwGQmXiTUZz9cE8haU3mNdVP
+Account generated: barbarbarbarbarbarbarbarbarbar#d1ef4b3 - 3M28pYYfjiUXFWvmHwdQnbgLYP2jkDDF3iL
+Account generated: wallet#d1ef4b3 - 3MBAK4oVXxWStk6JQJwcLK9riXhwFdujksw
+Accounts successfully funded
+
+Script has been set
+    ✓ Can deposit (2592ms)
+    ✓ Cannot withdraw more than was deposited (38ms)
+    ✓ Can withdraw (67ms)
+
+3 passing (7s)
+</pre></div>
+</div>
+<p>Now you can look more closely at what happened using your <a class="reference external" href="http://localhost:3000">Explorer</a> instance by just browsing blocks or pasting one of the addresses above to the search box. Remember to check the Blockchain Network to make sure you have selected the correct one(Custom in this case).</p>
+<p>To test against a different environment like testnet, just use the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>surfboard test --env=testnet
+</pre></div>
+</div>
+<p>If you want to explore what information is sent to and from the nodes during the calls of broadcast(…) in a test, run a test with -v (stands for “verbose”) to make Surfboard produce extensive logs:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>surfboard test -v
+</pre></div>
+</div>
+</section>
+<section id="deployment">
+<h4>Deployment<a class="headerlink" href="#deployment" title="Permalink to this heading"></a></h4>
+<p>You can also deploy your dApp to the wallet created for you by the surfboard init command. To do that, run the command below:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>surfboard run ./scripts/wallet.deploy.js --env=testnet --variables dappSeed=&quot;dApp seed&quot;
+</pre></div>
+</div>
+<p>When you run the above command, you will get an error(which is expected) because as you already know in order to deploy a dApp you would need to fund the wallet that will be scripted. You can request funding for your account using the <a class="reference external" href="https://testnet.wavesexplorer.com/faucet">faucet</a> and typing the address of the account Surfboard generated for you.</p>
+<p>Now that your account has funds run the command once more and it will output the transaction id associated with the deployment carried out by the <a class="reference internal" href="#wallet-ride-test-js"><span class="std std-ref">wallet.ride-test.js</span></a> file which you can look up using the <a class="reference external" href="http://localhost:3000">Explorer</a> instance. The output will look something like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>~/ride/examples/01$ surfboard run ./scripts/wallet.deploy.js --env=testnet --variables dappSeed=&quot;dApp seed&quot;
+6TBUs1ZSTDB8LZeDE8jGTwhGMLCvPKe8pBM1FWnHzYe7
+</pre></div>
+</div>
+</section>
+<section id="keeper-integration">
+<h4>Keeper Integration<a class="headerlink" href="#keeper-integration" title="Permalink to this heading"></a></h4>
+<p>If you want to go the extra mile this is your chance: you can integrate the project you have been working on with Keeper. Go to your browser of preference and open the <a class="reference external" href="https://keeper-wallet.app/">official website</a> for the tool and follow the installation instructions based on the type of browser you’re using.</p>
+<p>Open Keeper and click Get Started, choose a password and then Continue. On the bottom left instead of Mainnet select Custom as the Blockchain Network and set the Node Address to the one below which as you will notice is the address you assigned to your private node, then Save and Apply.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>http://localhost:6869
+</pre></div>
+</div>
+<p>Import a seed with tokens for the Blockchain Network. For simplicity, just use the staking seed of your node:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>waves private node seed with waves tokens
+</pre></div>
+</div>
+<p>Choose a name for the account, any name will do. Then start an instance of a <a class="reference external" href="https://raw.githubusercontent.com/jourlez/ride/master/docs/_static/01_ride/files/02_index.html">1-page serverless web appliction</a> using npm with the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>http-server-node --port 5050 --entryPoint ../../docs/_static/01_ride/files/02_index.html
+</pre></div>
+</div>
+<p>Check the instance you just started at:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>http://localhost:5050
+</pre></div>
+</div>
+<p>Enter the account address of the account generated for you by the command surfboard test under the name of wallet during testing into the script address blank text field.</p>
+<p>Type an amount and select Deposit which will cause Keeper to request your permission to sign an <a class="reference external" href="https://docs.decentralchain.io/es/master/03_advanced.html#invokescripttransaction" title="(en DecentralChain versión master)"><span class="xref std std-ref">InvokeScriptTransaction</span></a> with an attached payment of the amount you typed.</p>
+<p>Approve the transaction so it will be created and broadcasted to the network. You can use the transaction «View transaction» button at the bottom to get the transaction id and that way you can look up all the details using the <a class="reference external" href="http://localhost:3000">Explorer</a> instance. Remember to check the Blockchain Network to make sure you have selected the correct one(Custom in this case).</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>You could also use a <a class="reference external" href="https://waves-dapp.com/">service</a> that allows you to automatically generate an interface for a dApp using the names and data of the arguments of your callable functions. Just sign in using Keeper and again enter the account address of the account generated for you by the command surfboard test under the name of wallet during testing into the smart contract blank text field.</p>
+</div>
+<p>Now you have a good foundation to start developing using Ride, feel free to modify this example as you like and try to play a little bit more with it so you can learn more on your own.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="developer-guide-contributing">
+<h1>Developer Guide/Contributing<a class="headerlink" href="#developer-guide-contributing" title="Permalink to this heading"></a></h1>
+<section id="developer-requirements">
+<h2>Developer Requirements<a class="headerlink" href="#developer-requirements" title="Permalink to this heading"></a></h2>
+<p>Follow the same process as specified in <a class="reference internal" href="#user-requirements"><span class="std std-ref">user requirements</span></a>.</p>
+</section>
+<section id="project-structure">
+<h2>Project Structure<a class="headerlink" href="#project-structure" title="Permalink to this heading"></a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.
+├── ansible/
+│    ├── install.yml
+│    ├── requirements.yml
+│    ├── group_vars/
+│    │   └── all.yml
+│    └── roles/
+│        ├── deploy-node-explorer/tasks/
+│        │   ├── deploy-node-explorer
+│        │   └── main.yml
+│        └── update-system/tasks/
+│            ├── main.yml
+│            └── update-system.yml
+├── docs/
+│    ├── buildDocs.sh
+│    ├── conf.py
+│    ├── index.rst
+│    ├── make.bat
+│    ├── Makefile
+│    ├── _build/
+│    ├── _static/
+│    ├── _templates/
+│    └── locales/
+└── examples/
+    └── 01
+</pre></div>
+</div>
+<p>ansible folder:</p>
+<ul class="simple">
+<li><p>install.yml is the main playbook in charge of running all the roles used for project setup.</p></li>
+<li><p>requirements.yml contains all the required roles for the main playbook to work properly.</p></li>
+<li><p>group_vars/all.yml has all the variables used in the main playbook.</p></li>
+<li><p>roles/ is the folder containing each and every one of the roles that will be used by the main playbook.</p></li>
+</ul>
+<p>docs folder:</p>
+<ul class="simple">
+<li><p>buildDocs.sh is your build script which will be executed in a docker container on GitHub’s cloud.</p></li>
+<li><p>conf.py is a Python script holding the configuration of the Sphinx project. It contains the project name and release you specified to sphinx-quickstart, as well as some extra configuration keys.</p></li>
+<li><p>index.rst is the root document of the project, which serves as welcome page and contains the root of the “table of contents tree” (or toctree).</p></li>
+<li><p>make.bat and Makefile are convenience scripts to simplify some common Sphinx operations, such as rendering the content.</p></li>
+<li><p>_static/ will contain custom stylesheets and other static files like images.</p></li>
+<li><p>_templates/ will contain custom html template files overriding jinja templates.</p></li>
+<li><p>locales/ will contain all the translated versions of the documentation.</p></li>
+</ul>
+</section>
+<section id="document-generation">
+<h2>Document Generation<a class="headerlink" href="#document-generation" title="Permalink to this heading"></a></h2>
+<section id="html">
+<h3>HTML<a class="headerlink" href="#html" title="Permalink to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sphinx-build -b html docs/ docs/_build/html
+</pre></div>
+</div>
+</section>
+<section id="pdf">
+<h3>PDF<a class="headerlink" href="#pdf" title="Permalink to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sphinx-build -b rinoh docs/ docs/_build/rinoh -D language=&quot;en&quot;
+</pre></div>
+</div>
+</section>
+<section id="epub">
+<h3>EPUB<a class="headerlink" href="#epub" title="Permalink to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sphinx-build -b epub docs/ docs/_build/epub -D language=&quot;en&quot;
+</pre></div>
+</div>
+</section>
+</section>
+<section id="internationalization-i18n">
+<h2>Internationalization (i18n)<a class="headerlink" href="#internationalization-i18n" title="Permalink to this heading"></a></h2>
+<p>Run the command below from the “docs/” directory. This tells sphinx to parse your reST files and automatically find a bunch of strings-to-be-translated and give them a unique msgid that will be used during translation.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>make gettext
+</pre></div>
+</div>
+<p>After this, .pot files will be generated for you. You can verify it using the command below.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ls _build/gettext/
+</pre></div>
+</div>
+<p>Next, let’s tell sphinx to prepare some Spanish destination-language “.po” files from your above-generated source-lananguage “.pot” files. Execute the following command to prepare your Spanish-specific translation files.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sphinx-intl update -p _build/gettext -l es
+</pre></div>
+</div>
+<p>The above execution create “.po” files: one for each of your “.pot” source-language files, which correlate directly to each of your two “.rst” files. For example, for the new Spanish-specific “docs/locales/es/LC_MESSAGES/index.po” file, as you see it has the same contents as the source “.pot” file.</p>
+<p>These language-specific “.po” files are where you actually do the translating. If you’re a large project, then you’d probably want to use a special program or service to translate these files.</p>
+<p>After translating everything you can build your html static content in the language you want, for example Spanish:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sphinx-build -b html . _build/html/en -D language=&#39;es&#39;
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="index.html" class="btn btn-neutral float-left" title="Ride Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2022, Jourlez.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Lenguajes</dt>
+        
+          
+          <dd><a href="/ride/en/master/">en</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/ride/es/master/">es</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versiones</dt>
+        
+           <strong> 
+          <dd><a href="/ride/es/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Descargas</dt>
+        
+          <dd><a href="/ride/es/master/ride-docs_es_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+ 
+    </div>
+  </div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

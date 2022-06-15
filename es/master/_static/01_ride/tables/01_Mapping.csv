@@ -1,0 +1,6 @@
+Action, Resulting State
+"<initial>", "<empty>"
+"Alice deposits 5 Waves", "<alice-address> → 500000000"
+"Bob deposits 2 Waves", "<alice-address> → 500000000; <bob-address> → 200000000"
+"Bob withdraws 7 Waves", "<DENIED!>"
+"Alice withdraws 4 Waves", "<alice-address> → 100000000; <bob-address> → 200000000"
